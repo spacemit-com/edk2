@@ -124,9 +124,6 @@ TranslateError (
     case SBI_ERR_BAD_RANGE:
       return EFI_NOT_FOUND;
       break;
-    case SBI_ERR_NOT_IMPLEMENTED:
-      return EFI_UNSUPPORTED;
-      break;
     case SBI_ERR_TIMEOUT:
       return EFI_TIMEOUT;
       break;
