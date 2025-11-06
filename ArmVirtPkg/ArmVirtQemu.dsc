@@ -449,7 +449,6 @@
   OvmfPkg/Fdt/HighMemDxe/HighMemDxe.inf
   OvmfPkg/VirtioBlkDxe/VirtioBlk.inf
   OvmfPkg/VirtioScsiDxe/VirtioScsi.inf
-  OvmfPkg/VirtioNetDxe/VirtioNet.inf
   OvmfPkg/VirtioRngDxe/VirtioRng.inf
   OvmfPkg/VirtioSerialDxe/VirtioSerial.inf {
     <PcdsFixedAtBuild>
