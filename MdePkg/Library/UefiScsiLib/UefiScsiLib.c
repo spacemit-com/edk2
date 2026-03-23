@@ -1672,6 +1672,7 @@ ScsiRead10CommandEx (
   Context->HostAdapterStatus = HostAdapterStatus;
   Context->TargetStatus      = TargetStatus;
   Context->CallerEvent       = Event;
+  Context->DataLength        = DataLength;
 
   CommandPacket                   = &Context->CommandPacket;
   CommandPacket->Timeout          = Timeout;
@@ -1855,6 +1856,7 @@ ScsiWrite10CommandEx (
   Context->HostAdapterStatus = HostAdapterStatus;
   Context->TargetStatus      = TargetStatus;
   Context->CallerEvent       = Event;
+  Context->DataLength        = DataLength;
 
   CommandPacket                    = &Context->CommandPacket;
   CommandPacket->Timeout           = Timeout;
@@ -2038,6 +2040,7 @@ ScsiRead16CommandEx (
   Context->HostAdapterStatus = HostAdapterStatus;
   Context->TargetStatus      = TargetStatus;
   Context->CallerEvent       = Event;
+  Context->DataLength        = DataLength;
 
   CommandPacket                   = &Context->CommandPacket;
   CommandPacket->Timeout          = Timeout;
@@ -2221,6 +2224,7 @@ ScsiWrite16CommandEx (
   Context->HostAdapterStatus = HostAdapterStatus;
   Context->TargetStatus      = TargetStatus;
   Context->CallerEvent       = Event;
+  Context->DataLength        = DataLength;
 
   CommandPacket                    = &Context->CommandPacket;
   CommandPacket->Timeout           = Timeout;
