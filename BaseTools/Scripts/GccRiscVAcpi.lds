@@ -9,25 +9,31 @@
 
   Copyright (c) 2010 - 2021, Intel Corporation. All rights reserved.<BR>
   Copyright (c) 2015, Linaro Ltd. All rights reserved.<BR>
+  Copyright (c) 2026, SpacemiT Co., Ltd. All rights reserved.<BR>
 
   SPDX-License-Identifier: BSD-2-Clause-Patent
 
 **/
 
+PHDRS {
+  data PT_LOAD FILEHDR PHDRS FLAGS(6);	/* RW_ */
+}
+
 SECTIONS {
-  . = 0;
-  .data : {
-    KEEP(*(.entry))
-    *(.text .text.*)
+  . = SIZEOF_HEADERS;
+
+  .data : ALIGN(8) {
+    *(.data .data.*)
     *(.rodata .rodata.*)
     *(.srodata .srodata.*)
-    *(.data .data.*)
     *(.sdata .sdata.*)
     *(.bss .bss.*)
     *(.sbss .sbss.*)
-  }
+  } :data
 
   /DISCARD/ : {
+    *(.text)
+    *(.text.*)
     *(.note.GNU-stack)
     *(.gnu_debuglink)
     *(.interp)
